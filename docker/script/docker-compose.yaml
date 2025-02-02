@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  task:
+    image: cloudflare/cloudflared:latest
+    container_name: Cloudflare-Dockerization
+    command: tunnel run
+    env_file:
+      - .env
+    restart: always
